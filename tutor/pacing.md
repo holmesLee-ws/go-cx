@@ -39,4 +39,4 @@
 
 ## 기록
 
-첫 탐침(또는 진단)의 답을 받은 차례에 `read`를 `unknown`에서 판단값으로 바꾼다. 모두 맞으면 `flow`다. 판단이 바뀌면 `learner/state.json`의 `pace`를 고친다. 부분 오답이 두 번 이어지면 `needs_more`로 바꾼다. `read`는 `flow`, `too_fast`, `needs_more`, `bored_or_ready`, `stuck` 중 하나다(처음 값 `unknown`은 판단 전을 뜻한다). `evidence`에는 그렇게 본 근거를 한 문장으로, `action`에는 바꾼 방식을 적는다. 바뀌기 전 값은 `pace.history`에 `{at, read, evidence}`로 쌓는다. 학습자에게 맞았던 방식은 `preferences`에 남긴다.
+첫 탐침(또는 진단)의 답을 받은 차례에 `read`를 `unknown`에서 판단값으로 바꾼다. 모두 맞으면 `flow`다. 판단이 바뀌면 `learner/state.json`의 `pace`를 고친다. 부분 오답이 두 번 이어지면 `needs_more`로 바꾼다. `read`는 `flow`, `too_fast`, `needs_more`, `bored_or_ready`, `stuck` 중 하나다(처음 값 `unknown`은 판단 전을 뜻한다). `evidence`에는 그렇게 본 근거를 한 문장으로, `action`에는 바꾼 방식을 적는다. 바뀌기 전 값은 `pace.history`에 `{at, read, evidence}`로 시간순 뒤에 붙인다. 학습자에게 맞았던 방식은 `preferences`에 남긴다.
