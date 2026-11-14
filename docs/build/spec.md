@@ -82,6 +82,7 @@
 
 - go-develop과 같은 런타임 의존 없는 하네스다. 파일은 `CLAUDE.md`, `tutor/*.md`, `.claude/skills/*`, `.claude/settings.json`, `curriculum/map.md`, `learner-template/`, `.gitignore`, `README.md`, `docs/build/`다.
 - `tools/check.mjs`는 리포 관리자 전용 검사기다. 학습자 경로에 들어가지 않는다.
+- HTML 열기 deny 규칙(`open * *`, `*..*`)은 정상 동작 밖의 열기를 줄이는 장치다. 보안 경계가 아니다. Claude Code 문서도 Bash 규칙을 보안 경계로 보지 않는다. Windows Git Bash `start`와 PowerShell `Start-Process`는 이 머신에서 실측하지 못한다(최종 보고에 미실측으로 적는다).
 - 법규 근거 규칙은 `tutor/legal-sources.md`로 따로 둔다. 소비자분쟁해결기준(고시)과 전자상거래법은 개정이 잦다. 그래서 sources.md에 조회일을 두고, 세션 중 재확인을 규칙으로 한다.
 - 수준 척도는 시리즈 공통의 Explain·Apply·Evaluate·Develop을 쓴다. CX에서 무엇을 증거로 보는지는 `tutor/assessment.md`에 적는다.
 - ISO 10001~10004는 유료 표준이다. 본문을 인용하지 않는다. iso.org 공개 페이지의 판·범위와 KS 부합화 번호만 쓴다. 학습자에게는 표준의 「구조」를 묻고 조항 문구를 외우게 하지 않는다.
@@ -117,4 +118,4 @@
 GitHub 원격에서 새로 클론한 사본으로 본다.
 
 1. CLI: 대화형 `claude`를 기본 권한 모드·프로젝트 설정으로 가상 터미널에서 실행한다. 이 머신에 tmux가 없으면 python `pty`로 구동하고 화면을 캡처한다. 첫 메시지로 「안녕」을 보낸다. 합격: 신뢰 대화상자를 수락한 뒤 권한 창 0회로 첫 질문 → 진단 → `learner/state.json` → HTML 생성·열기까지 간다. 학습자 답에 환불 법 질문을 하나 넣는다. 법령 조회(WebFetch·WebSearch) 1회도 권한 창 없이 지나가야 한다.
-2. Desktop: 이 머신에서 Claude Desktop을 조작할 수 없으면 R3의 Desktop 절반은 **미충족**이다. 최종 보고 첫머리에 적고, 사람이 1분 안에 확인할 절차를 준다.
+2. Desktop: 관찰 항목은 Local 환경·Code 탭에서 「안녕」 → 튜터 첫 질문 → `learner/state.json`·HTML 생성 → 채팅 경로 클릭으로 열기, 그리고 HTML을 고친 뒤에도 권한 창 0회인지다. 이 머신에서 Claude Desktop을 조작할 수 없으면 R3의 Desktop 절반은 **미충족**이다. 최종 보고 첫머리에 적고, 사람이 1분 안에 확인할 절차를 준다.
