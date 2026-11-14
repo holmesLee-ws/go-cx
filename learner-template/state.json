@@ -11,7 +11,9 @@
   "current": {
     "module": null,
     "path": null,
-    "pending_probe": null
+    "pending_probe": null,
+    "quick_check": null,
+    "domestic_turns": 0
   },
   "modules": {},
   "gaps": [],
